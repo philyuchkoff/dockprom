@@ -37,7 +37,7 @@ Containers:
 Navigate to `http://<host-ip>:3000` and login with user ***admin*** password ***admin***. You can change the credentials in the compose file or by supplying the `ADMIN_USER` and `ADMIN_PASSWORD` environment variables on compose up. The config file can be added directly in grafana part like this
 ```
 grafana:
-  image: grafana/grafana:5.2.4
+  image: grafana/grafana:latest
   env_file:
     - config
 
@@ -291,7 +291,7 @@ First perform a `docker-compose down` then modify your docker-compose.yml to inc
 
 ```
   grafana:
-    image: grafana/grafana:5.2.2
+    image: grafana/grafana:latest
     container_name: grafana
     volumes:
       - grafana_data:/var/lib/grafana
@@ -329,7 +329,7 @@ To run the grafana container as `user: 104` change your `docker-compose.yml` lik
 
 ```
   grafana:
-    image: grafana/grafana:5.2.2
+    image: grafana/grafana:latest
     container_name: grafana
     volumes:
       - grafana_data:/var/lib/grafana
